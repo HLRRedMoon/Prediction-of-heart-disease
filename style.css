@@ -8,6 +8,10 @@
     --sans: Oxygen, sans-serif;
     --dosis: 'Dosis', sans-serif;
 }
+.hidden{
+    display: none !important;
+    opacity: 0;
+}
 body{
     max-width: 100%;
     /* background: linear-gradient(190deg, #12c2e9 0%, #f64f59 100%); */
@@ -41,6 +45,27 @@ h1>a{
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+.bullets {
+    text-align: center;
+    margin: 22px 0 0 0;
+}
+
+.bullet {
+    height: 10px;
+    width: 10px;
+    background-color: #ccc;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.bullet.current {
+    background-color: #007BFF;
+}
+
+.bullet.completed {
+    background-color: #28A745;
 }
 .attri-list{
     display: flex;
@@ -80,6 +105,32 @@ section>ul>li{
     border: 1px solid gray;
     border-radius: 20px 24px;
     padding: 4px 12px;
+    box-shadow: 4px 4px 4px gray;
+}
+.step {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 45px ;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.step>li{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 35px;
+    width: 85%;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 20px 24px;
+    padding: 4px 12px;
+    box-shadow: 4px 4px 4px gray;
+    transition: opacity 0.5s ease-in;
 }
 h3{
     font-family: var(--dosis);
@@ -128,14 +179,10 @@ h3{
     font-family: var(--dosis);
     font-size: 80%;
 }
-.sub-div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .sub-but{
-    width: 95%;
-    height: 70px;
+    width: 85%;
+    height: 60px;
     color: white;
     border: 1px solid black;
     border-radius: 10px 12px;
@@ -144,6 +191,7 @@ h3{
     font-size: large;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 4px 4px 4px gray;
 }
 .sub-but:hover{
     background-color: #56e36d;
@@ -173,6 +221,20 @@ footer{
 
 .footlist [class*="fa-"]:hover {
     color: blue;
+}
+/* Profile */
+.pass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    background-color: whitesmoke;
+    margin: 25px 25px;
+    border-radius: 20px 24px;
+    border: 0.5px solid black;
+    box-shadow: 4px 4px 4px gray;
+}
+.ch{
 }
 
 @media (min-width: 850px){
